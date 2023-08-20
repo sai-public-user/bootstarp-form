@@ -7,11 +7,12 @@ const CustomForm = forwardRef(
     { title, subTitle, fields = [], itemsPerRow = 2, handleSubmit = () => {}, data = {} },
     ref
   ) => {
+    const formRef = createRef();
     const [values, setValues] = useState(data);
     const [validated, setValidated] = useState(false);
     const onSubmit = useCallback(
       (e) => {
-        const form = e.currentTarget;
+        const form = formRef.current;
         setValidated(true);
         console.log("e ==> ", form.elements, form.checkValidity());
         if (form.checkValidity() === false) {
@@ -62,7 +63,10 @@ const CustomForm = forwardRef(
               validated={validated}
               onSubmit={onSubmit}
               className="mt-5"
-              ref={el => ref?.current?.push(el)}
+              ref={el => {
+                ref?.current?.push(el);
+                formRef.current = el;
+              }}
             >
               {fieldsInRows?.map((rowFields, rowIdx) => (
                 <Row
@@ -82,6 +86,7 @@ const CustomForm = forwardRef(
                         }_${field.name}`}
                         onChange={handleChange}
                         {...field}
+                        value={values[field.name]}
                         ref={el => ref?.current?.push(el)}
                       />
                     );

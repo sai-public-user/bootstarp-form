@@ -1,10 +1,10 @@
-import { createRef, forwardRef, useMemo } from "react";
+import { forwardRef, useMemo } from "react";
 import { Form, Col, Stack } from "react-bootstrap";
 import IncrementalFields from "./IncrementalFields";
 
 const CustomField = forwardRef(
   (
-    { xs, sm, md, lg, xl, onChange, labelProps, type, ...props },
+    { xs, sm, md, lg, xl, onChange, labelProps, type, value, ...props },
     ref
   ) => {
     const formControl = useMemo(() => {
@@ -22,6 +22,7 @@ const CustomField = forwardRef(
                   inline
                   label={opt.label}
                   name={props.name}
+                  checked={props.name === value}
                   type={type}
                   value={opt.value}
                   ref={(el) => ref?.current?.push(el)}
@@ -39,6 +40,7 @@ const CustomField = forwardRef(
               onChange={onChange}
               {...props}
               ref={(el) => ref?.current?.push(el)}
+              value={value}
             >
               <option disabled>Select Option</option>
               {props?.options?.map((opt, optIdx) => (
@@ -64,11 +66,12 @@ const CustomField = forwardRef(
               ref={(el) => ref?.current?.push(el)}
               onChange={onChange}
               type={type}
+              value={value}
               {...props}
             />
           );
       }
-    }, [onChange, props, type, ref]);
+    }, [onChange, props, type, ref, value]);
     const showLabel = useMemo(() => {
       const typesWithoutLabel = [];
       return !typesWithoutLabel.includes(type) && props.label;

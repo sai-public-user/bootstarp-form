@@ -78,46 +78,38 @@ const fields = [
     type: "number",
     required: true,
   },
-  // {
-  //   label: "Meta Data",
-  //   name: "metaData",
-  //   type: "repeat",
-  //   required: true,
-  //   fields: [
-  //     {
-  //       label: "First Name",
-  //       name: "firstName",
-  //       type: "text",
-  //       required: true,
-  //     },
-  //     {
-  //       label: "Last Name",
-  //       name: "lastName",
-  //       type: "text",
-  //       required: true,
-  //     },
-  //     {
-  //       label: "Marital Status",
-  //       name: "maritalStatus",
-  //       type: "switch",
-  //       options: [
-  //         { label: "Married", value: "married" },
-  //         { label: "Single", value: "single" },
-  //         { label: "Divorced", value: "divorced" },
-  //       ],
-  //     },{
-  //       label: "Gender",
-  //       name: "gender",
-  //       type: "radio",
-  //       options: [
-  //         { label: "Male", value: "male" },
-  //         { label: "Female", value: "female" },
-  //         { label: "Other", value: "other" },
-  //       ],
-  //       required: true,
-  //     }
-  //   ],
-  // },
+  {
+    label: "Meta Data",
+    name: "metaData",
+    type: "repeat",
+    required: true,
+    max: 5,
+    hasDelete: true,
+    fields: [
+      {
+        label: "First Name",
+        name: "firstName",
+        type: "text",
+        required: true,
+      },
+      {
+        label: "Last Name",
+        name: "lastName",
+        type: "text",
+        required: true,
+      },
+      {
+        label: "Marital Status",
+        name: "maritalStatus",
+        type: "switch",
+        options: [
+          { label: "Married", value: "married" },
+          { label: "Single", value: "single" },
+          { label: "Divorced", value: "divorced" },
+        ],
+      }
+    ],
+  },
 ];
 
 function App() {
@@ -129,7 +121,7 @@ function App() {
         fields={fields}
         itemsPerRow={2}
         handleSubmit={(data) => alert(JSON.stringify(data))}
-        data={{ fiestName: 'deepu' }}
+        data={{ firstName: 'deepu' }}
       />
     </div>
   );
