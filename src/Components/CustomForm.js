@@ -4,12 +4,21 @@ import { createRef, forwardRef, useCallback, useMemo, useState } from "react";
 
 const CustomForm = forwardRef(
   (
-    { title, subTitle, fields = [], itemsPerRow = 2, handleSubmit = () => {}, data = {} },
+    {
+      title,
+      subTitle,
+      fields = [],
+      itemsPerRow = 2,
+      handleSubmit = () => {},
+      data = {},
+      showFormByDefault = false,
+    },
     ref
   ) => {
     const formRef = createRef();
     const [values, setValues] = useState(data);
     const [validated, setValidated] = useState(false);
+    const [showForm, setShowForm] = useState(showFormByDefault);
     const onSubmit = useCallback(
       (e) => {
         const form = formRef.current;
@@ -49,61 +58,85 @@ const CustomForm = forwardRef(
       });
     };
 
+    const handleCreateForm = () => {
+      setShowForm(true);
+    };
+
+    const hanldeCloseForm = () => {
+      setValues(data);
+      setShowForm(false);
+    };
+
     return (
       <ThemeProvider>
         <Card className="m-2">
-          <Card.Body>
-            {title && <Card.Title>{title}</Card.Title>}
-            {subTitle && (
-              <Card.Subtitle className="mb-2 text-muted">
-                {subTitle}
-              </Card.Subtitle>
-            )}
-            <Form
-              validated={validated}
-              onSubmit={onSubmit}
-              className="mt-5"
-              ref={el => {
-                ref?.current?.push(el);
-                formRef.current = el;
-              }}
-            >
-              {fieldsInRows?.map((rowFields, rowIdx) => (
-                <Row
-                  className="mb-3"
-                  key={`${title || "form_card"}_row_${rowIdx}`}
-                >
-                  {rowFields.map((field, fieldIdx) => {
-                    const size = Math.floor(12 / itemsPerRow);
-                    let widthProp = size > 2 ? { lg: size } : { md: size };
-                    widthProp =
-                      field.type === "repeat" ? { lg: 12 } : widthProp;
-                    return (
-                      <CustomField
-                        {...widthProp}
-                        key={`${"form_"}_field_${rowIdx}_${fieldIdx}_${
-                          field.type
-                        }_${field.name}`}
-                        onChange={handleChange}
-                        {...field}
-                        value={values[field.name]}
-                        ref={el => ref?.current?.push(el)}
-                      />
-                    );
-                  })}
-                </Row>
-              ))}
-              <Stack
-                gap={2}
-                className="justify-content-md-end justify-content-center flex-row"
+          {showForm ? (
+            <Card.Body>
+              {title && <Card.Title>{title}</Card.Title>}
+              {subTitle && (
+                <Card.Subtitle className="mb-2 text-muted">
+                  {subTitle}
+                </Card.Subtitle>
+              )}
+              <Form
+                validated={validated}
+                onSubmit={onSubmit}
+                className="mt-5"
+                ref={(el) => {
+                  ref?.current?.push(el);
+                  formRef.current = el;
+                }}
               >
-                <Button variant="secondary">Clear</Button>
-                <Button variant="primary" type="submit">
-                  Submit
+                {fieldsInRows?.map((rowFields, rowIdx) => (
+                  <Row
+                    className="mb-3"
+                    key={`${title || "form_card"}_row_${rowIdx}`}
+                  >
+                    {rowFields.map((field, fieldIdx) => {
+                      const size = Math.floor(12 / itemsPerRow);
+                      let widthProp = size > 2 ? { lg: size } : { md: size };
+                      widthProp =
+                        field.type === "repeat" ? { lg: 12 } : widthProp;
+                      return (
+                        <CustomField
+                          {...widthProp}
+                          key={`${"form_"}_field_${rowIdx}_${fieldIdx}_${
+                            field.type
+                          }_${field.name}`}
+                          onChange={handleChange}
+                          {...field}
+                          value={values[field.name]}
+                          ref={(el) => ref?.current?.push(el)}
+                        />
+                      );
+                    })}
+                  </Row>
+                ))}
+                <Stack
+                  gap={2}
+                  className="justify-content-md-end justify-content-center flex-row"
+                >
+                  <Button variant="secondary" onClick={hanldeCloseForm}>
+                    Cancel
+                  </Button>
+                  <Button variant="primary" type="submit">
+                    Submit
+                  </Button>
+                </Stack>
+              </Form>
+            </Card.Body>
+          ) : (
+            <Card.Body className="d-flex flex-column">
+              <div className="h3 text-muted d-flex justify-content-center mb-3">
+                {`No Form is created, do you want to create "${title}" ?`}
+              </div>
+              <span className="d-flex justify-content-center">
+                <Button variant="primary" onClick={handleCreateForm}>
+                  Create Form
                 </Button>
-              </Stack>
-            </Form>
-          </Card.Body>
+              </span>
+            </Card.Body>
+          )}
         </Card>
       </ThemeProvider>
     );

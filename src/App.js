@@ -116,8 +116,8 @@ function App() {
   return (
     <div className="App">
       <CustomForm
-        title="Test Form"
-        subTitle="Sample subtitle"
+        title="Student Inauguration Form"
+        subTitle="Studen form to gather data for student Inauguration and future procedures"
         fields={fields}
         itemsPerRow={2}
         handleSubmit={(data) => alert(JSON.stringify(data))}
