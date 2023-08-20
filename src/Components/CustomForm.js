@@ -1,25 +1,28 @@
 import { Form, Row, Card, Button, Stack, ThemeProvider } from "react-bootstrap";
 import CustomField from "./CustomField";
-import { forwardRef, useCallback, useMemo, useState } from "react";
+import { createRef, forwardRef, useCallback, useMemo, useState } from "react";
 
 const CustomForm = forwardRef(
   (
-    { title, subTitle, fields = [], itemsPerRow = 2, handleSubmit = () => {} },
+    { title, subTitle, fields = [], itemsPerRow = 2, handleSubmit = () => {}, data = {} },
     ref
   ) => {
-    const [values, setValues] = useState({});
+    const [values, setValues] = useState(data);
     const [validated, setValidated] = useState(false);
-    const onSubmit = useCallback((e) => {
-      const form = e.currentTarget;
-      setValidated(true);
-      console.log("e ==> ", form.elements, form.checkValidity());
-      if (form.checkValidity() === false) {
-        e.preventDefault();
-        e.stopPropagation();
-      } else {
-        handleSubmit(values);
-      }
-    }, [values, handleSubmit]);
+    const onSubmit = useCallback(
+      (e) => {
+        const form = e.currentTarget;
+        setValidated(true);
+        console.log("e ==> ", form.elements, form.checkValidity());
+        if (form.checkValidity() === false) {
+          e.preventDefault();
+          e.stopPropagation();
+        } else {
+          handleSubmit(values);
+        }
+      },
+      [values, handleSubmit]
+    );
 
     const fieldsInRows = useMemo(() => {
       if (Array.isArray(fields) && fields.length) {
@@ -39,7 +42,7 @@ const CustomForm = forwardRef(
 
     const handleChange = (evt) => {
       setValues((prev) => {
-        console.log(evt.target.value)
+        console.log(evt.target.value, evt.target.name);
         prev[evt.target.name] = evt.target.value;
         return prev;
       });
@@ -59,7 +62,7 @@ const CustomForm = forwardRef(
               validated={validated}
               onSubmit={onSubmit}
               className="mt-5"
-              ref={ref}
+              ref={el => ref?.current?.push(el)}
             >
               {fieldsInRows?.map((rowFields, rowIdx) => (
                 <Row
@@ -68,17 +71,21 @@ const CustomForm = forwardRef(
                 >
                   {rowFields.map((field, fieldIdx) => {
                     const size = Math.floor(12 / itemsPerRow);
-                    const widthProp = size > 2 ? { lg: size } : { md: size };
+                    let widthProp = size > 2 ? { lg: size } : { md: size };
+                    widthProp =
+                      field.type === "repeat" ? { lg: 12 } : widthProp;
                     return (
-                    <CustomField
-                      {...widthProp}
-                      key={`${
-                        title || "form_card"
-                      }_field_${rowIdx}_${fieldIdx}`}
-                      onChange={handleChange}
-                      {...field}
-                    />
-                  )})}
+                      <CustomField
+                        {...widthProp}
+                        key={`${"form_"}_field_${rowIdx}_${fieldIdx}_${
+                          field.type
+                        }_${field.name}`}
+                        onChange={handleChange}
+                        {...field}
+                        ref={el => ref?.current?.push(el)}
+                      />
+                    );
+                  })}
                 </Row>
               ))}
               <Stack
