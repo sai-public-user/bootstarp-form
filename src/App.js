@@ -117,6 +117,7 @@ const fields = [
 
 function App() {
   const [search, setSearch] = useState();
+  const [data, setData] = useState({});
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -124,7 +125,7 @@ function App() {
 
   const handleSearch = (event) => {
     if(event.key === 'Enter'){
-      // make the api call here
+      // make the api call here in .then do setData(response.data) or something similar
       console.log('enter press here! ', event.target.value);
       return;
     }
@@ -153,7 +154,7 @@ function App() {
         itemsPerRow={2}
         handleSubmit={(data) => alert(JSON.stringify(data))}
         customContent={getCustomContent()}
-        data={{ firstName: "deepu" }}
+        data={data}
       />
     </div>
   );
