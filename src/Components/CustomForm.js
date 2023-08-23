@@ -1,6 +1,6 @@
 import { Form, Row, Card, Button, Stack, ThemeProvider } from "react-bootstrap";
 import CustomField from "./CustomField";
-import { createRef, forwardRef, useCallback, useMemo, useState } from "react";
+import { forwardRef, memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const CustomForm = forwardRef(
   (
@@ -12,27 +12,31 @@ const CustomForm = forwardRef(
       handleSubmit = () => {},
       data = {},
       showFormByDefault = false,
+      customContent
     },
     ref
   ) => {
-    const formRef = createRef();
+    const formRef = useRef();
     const [values, setValues] = useState(data);
     const [validated, setValidated] = useState(false);
     const [showForm, setShowForm] = useState(showFormByDefault);
     const onSubmit = useCallback(
       (e) => {
-        const form = formRef.current;
+        const form = e.currentTarget;
         setValidated(true);
         console.log("e ==> ", form.elements, form.checkValidity());
-        if (form.checkValidity() === false) {
-          e.preventDefault();
-          e.stopPropagation();
-        } else {
+        if (form.checkValidity() === true) {
           handleSubmit(values);
         }
+        e.preventDefault();
+        e.stopPropagation();
       },
       [values, handleSubmit]
     );
+
+    useEffect(() => {
+      setValues(prev => ({ ...prev, ...data }));
+    }, [data])
 
     const fieldsInRows = useMemo(() => {
       if (Array.isArray(fields) && fields.length) {
@@ -63,7 +67,12 @@ const CustomForm = forwardRef(
     };
 
     const hanldeCloseForm = () => {
-      setValues(data);
+      console.log('formRef ==> ', formRef.current);
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+      setValidated(false);
+      setValues({...data});
       setShowForm(false);
     };
 
@@ -78,14 +87,13 @@ const CustomForm = forwardRef(
                   {subTitle}
                 </Card.Subtitle>
               )}
+              {customContent}
               <Form
                 validated={validated}
                 onSubmit={onSubmit}
                 className="mt-5"
-                ref={(el) => {
-                  ref?.current?.push(el);
-                  formRef.current = el;
-                }}
+                ref={formRef}
+                id={`${title.replace(/ /g, '_')?.toLowerCase() || 'custom_form'}`}
               >
                 {fieldsInRows?.map((rowFields, rowIdx) => (
                   <Row
@@ -143,4 +151,4 @@ const CustomForm = forwardRef(
   }
 );
 
-export default CustomForm;
+export default memo(CustomForm);

@@ -1,4 +1,4 @@
-import { forwardRef, useMemo } from "react";
+import { forwardRef, memo, useMemo } from "react";
 import { Form, Col, Stack } from "react-bootstrap";
 import IncrementalFields from "./IncrementalFields";
 
@@ -86,12 +86,29 @@ const CustomField = forwardRef(
         xl={xl}
         controlId={props.name}
       >
-        {showLabel && (
-          <Form.Label className="h6" {...labelProps}>
-            {props.label}
-          </Form.Label>
+        {type === "repeat" ? (
+          <>
+            {showLabel && (
+              <Form.Label className="h6" {...labelProps}>
+                {props.label}
+              </Form.Label>
+            )}
+            {formControl}
+          </>
+        ) : (
+          <Stack className="flex-row row">
+            {showLabel && (
+              <Col md={3} sm={12}>
+                <Form.Label className="h6" {...labelProps}>
+                  {props.label}
+                </Form.Label>
+              </Col>
+            )}
+            <Col md={9} sm={12}>
+              {formControl}
+            </Col>
+          </Stack>
         )}
-        {formControl}
         <Form.Control.Feedback
           as="div"
           tooltip
@@ -104,4 +121,4 @@ const CustomField = forwardRef(
   }
 );
 
-export default CustomField;
+export default memo(CustomField);

@@ -1,6 +1,9 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import CustomForm from "./Components/CustomForm";
+import { Col, Form, InputGroup, Row } from "react-bootstrap";
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { useState } from "react";
 
 const fields = [
   {
@@ -107,12 +110,40 @@ const fields = [
           { label: "Single", value: "single" },
           { label: "Divorced", value: "divorced" },
         ],
-      }
+      },
     ],
   },
 ];
 
 function App() {
+  const [search, setSearch] = useState();
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  }
+
+  const handleSearch = (event) => {
+    if(event.key === 'Enter'){
+      // make the api call here
+      console.log('enter press here! ', event.target.value);
+      return;
+    }
+  }
+  
+  const getCustomContent = () => {
+    return (
+      <Row className="justify-content-center justify-content-lg-end mt-4">
+        <Col md={12} lg={3}>
+          <InputGroup>
+            <Form.Control type="search" value={search} id="search" placeholder="Search" onChange={handleChange} onKeyDown={handleSearch} />
+            <InputGroup.Text id="search">
+              <MagnifyingGlassIcon width="30" />
+            </InputGroup.Text>
+          </InputGroup>
+        </Col>
+      </Row>
+    );
+  };
   return (
     <div className="App">
       <CustomForm
@@ -121,7 +152,8 @@ function App() {
         fields={fields}
         itemsPerRow={2}
         handleSubmit={(data) => alert(JSON.stringify(data))}
-        data={{ firstName: 'deepu' }}
+        customContent={getCustomContent()}
+        data={{ firstName: "deepu" }}
       />
     </div>
   );
