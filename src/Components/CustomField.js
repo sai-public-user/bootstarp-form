@@ -1,6 +1,7 @@
 import { forwardRef, memo, useMemo } from "react";
 import { Form, Col, Stack } from "react-bootstrap";
 import IncrementalFields from "./IncrementalFields";
+import CustomTable from "./CustomTable";
 
 const CustomField = forwardRef(
   (
@@ -9,6 +10,9 @@ const CustomField = forwardRef(
   ) => {
     const formControl = useMemo(() => {
       switch (type) {
+        case "table": {
+          return <CustomTable {...props} ref={ref} />
+        }
         case "repeat": {
           return <IncrementalFields {...props} onChange={onChange} ref={ref} />;
         }
@@ -86,7 +90,7 @@ const CustomField = forwardRef(
         xl={xl}
         controlId={props.name}
       >
-        {type === "repeat" ? (
+        {["table", "repeat"].includes(type) ? (
           <>
             {showLabel && (
               <Form.Label className="h6" {...labelProps}>
