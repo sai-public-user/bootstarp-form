@@ -1,6 +1,14 @@
 import { Form, Row, Card, Button, Stack, ThemeProvider } from "react-bootstrap";
 import CustomField from "./CustomField";
-import { forwardRef, memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  forwardRef,
+  memo,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 const CustomForm = forwardRef(
   (
@@ -12,7 +20,7 @@ const CustomForm = forwardRef(
       handleSubmit = () => {},
       data = {},
       showFormByDefault = false,
-      customContent
+      customContent,
     },
     ref
   ) => {
@@ -35,8 +43,8 @@ const CustomForm = forwardRef(
     );
 
     useEffect(() => {
-      setValues(prev => ({ ...prev, ...data }));
-    }, [data])
+      setValues((prev) => ({ ...prev, ...data }));
+    }, [data]);
 
     const fieldsInRows = useMemo(() => {
       if (Array.isArray(fields) && fields.length) {
@@ -67,12 +75,12 @@ const CustomForm = forwardRef(
     };
 
     const hanldeCloseForm = () => {
-      console.log('formRef ==> ', formRef.current);
+      console.log("formRef ==> ", formRef.current);
       if (formRef.current) {
         formRef.current.reset();
       }
       setValidated(false);
-      setValues({...data});
+      setValues({ ...data });
       setShowForm(false);
     };
 
@@ -93,7 +101,9 @@ const CustomForm = forwardRef(
                 onSubmit={onSubmit}
                 className="mt-5"
                 ref={formRef}
-                id={`${title.replace(/ /g, '_')?.toLowerCase() || 'custom_form'}`}
+                id={`${
+                  title.replace(/ /g, "_")?.toLowerCase() || "custom_form"
+                }`}
               >
                 {fieldsInRows?.map((rowFields, rowIdx) => (
                   <Row
@@ -103,8 +113,9 @@ const CustomForm = forwardRef(
                     {rowFields.map((field, fieldIdx) => {
                       const size = Math.floor(12 / itemsPerRow);
                       let widthProp = size > 2 ? { lg: size } : { md: size };
-                      widthProp =
-                        field.type === "repeat" ? { lg: 12 } : widthProp;
+                      widthProp = ["repeat", "table"].includes(field.type)
+                        ? { lg: 12 }
+                        : widthProp;
                       return (
                         <CustomField
                           {...widthProp}

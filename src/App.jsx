@@ -2,8 +2,9 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import CustomForm from "./Components/CustomForm";
 import { Col, Form, InputGroup, Row } from "react-bootstrap";
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import TestData from "./metadata.json";
 
 const fields = [
   {
@@ -113,6 +114,24 @@ const fields = [
       },
     ],
   },
+  {
+    label: "Meta Data",
+    name: "metaData",
+    type: "table",
+    rowsPerPage: 25,
+    rows: TestData,
+    showIndex: true,
+    rowClass: "test",
+    responsive: true,
+    striped: true,
+    bordered: true,
+    hover: true,
+    pagination: 'default',
+    columns: [
+      { name: "FieldCode", label: "FieldCode" },
+      { name: "FieldValue", label: "FieldValue" },
+    ],
+  },
 ];
 
 function App() {
@@ -121,22 +140,29 @@ function App() {
 
   const handleChange = (e) => {
     setSearch(e.target.value);
-  }
+  };
 
   const handleSearch = (event) => {
-    if(event.key === 'Enter'){
+    if (event.key === "Enter") {
       // make the api call here in .then do setData(response.data) or something similar
-      console.log('enter press here! ', event.target.value);
+      console.log("enter press here! ", event.target.value);
       return;
     }
-  }
-  
+  };
+
   const getCustomContent = () => {
     return (
       <Row className="justify-content-center justify-content-lg-end mt-4">
         <Col md={12} lg={3}>
           <InputGroup>
-            <Form.Control type="search" value={search} id="search" placeholder="Search" onChange={handleChange} onKeyDown={handleSearch} />
+            <Form.Control
+              type="search"
+              value={search}
+              id="search"
+              placeholder="Search"
+              onChange={handleChange}
+              onKeyDown={handleSearch}
+            />
             <InputGroup.Text id="search">
               <MagnifyingGlassIcon width="30" />
             </InputGroup.Text>

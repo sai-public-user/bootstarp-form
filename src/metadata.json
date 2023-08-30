@@ -1,0 +1,974 @@
+[
+  {
+    "FieldCode": "UCLASummerOnlyStudent",
+    "FieldValue": "R"
+  },
+  {
+    "FieldCode": "UCLATransferCreditEvaluatorInitials",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAFreshmanSummerProgramStudent",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLATransferSummerProgramStudent",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLADoctoralDegreeCount",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLALastSummerTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLASecondaryBaccalaureateStudent",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLALawNonmatriculatedProgram",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAGradProfDegreeExpectedTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAGradProfGraduationStatus",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAGradProfExpectedTermLastUpdate",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALeaveOfAbsenceStartTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALeaveOfAbsenceReturnTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateAdmissionLevel",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProspectiveTuitionAssistance",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLADoctoralNonresExemptionLastTerm",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "UCLACurrentLastSchoolAttendedIsInCA",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAGraduatingTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAVisaTypeWinter",
+    "FieldValue": "J1"
+  },
+  {
+    "FieldCode": "UCLAVisaTypeSpring",
+    "FieldValue": "J1"
+  },
+  {
+    "FieldCode": "UCLAVisaTypeFall",
+    "FieldValue": "J1"
+  },
+  {
+    "FieldCode": "UCLAResidencyWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAResidencySpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAResidencyFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLADegreeWinter",
+    "FieldValue": "PHD = DOCTOR OF PHILOSOPHY"
+  },
+  {
+    "FieldCode": "UCLADegreeSpring",
+    "FieldValue": "PHD = DOCTOR OF PHILOSOPHY"
+  },
+  {
+    "FieldCode": "UCLADegreeFall",
+    "FieldValue": "PHD = DOCTOR OF PHILOSOPHY"
+  },
+  {
+    "FieldCode": "UCLAReducedEducationalFeeWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAReducedEducationalFeeSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAReducedEducationalFeeFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAEducationAbroadProgramStudentWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAEducationAbroadProgramStudentSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAEducationAbroadProgramStudentFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAJointStudentWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAJointStudentSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAJointStudentFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAROTCWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAROTCSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAROTCFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAReducedNonresidentFeeWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAReducedNonresidentFeeSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAReducedNonresidentFeeFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAVisitingStudentTypeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAVisitingStudentTypeSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAVisitingStudentTypeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAStudentInAbsentiaWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAStudentInAbsentiaSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAStudentInAbsentiaFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAMaterialFeeCohortTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAMaterialFeeCohortTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAMaterialFeeCohortTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAEnrollmentWithdrawalWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAEnrollmentWithdrawalSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAEnrollmentWithdrawalFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAEnrollmentWithdrawalEffectiveDateWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAEnrollmentWithdrawalEffectiveDateSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAEnrollmentWithdrawalEffectiveDateFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastDateOfAttendanceWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastDateOfAttendanceSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastDateOfAttendanceFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProgramFeeAssessmentFlagWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAProgramFeeAssessmentFlagSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAProgramFeeAssessmentFlagFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLACareerWinter",
+    "FieldValue": "G"
+  },
+  {
+    "FieldCode": "UCLACareerSpring",
+    "FieldValue": "G"
+  },
+  {
+    "FieldCode": "UCLACareerFall",
+    "FieldValue": "G"
+  },
+  {
+    "FieldCode": "UCLAClassificationWinter",
+    "FieldValue": "GD2"
+  },
+  {
+    "FieldCode": "UCLAClassificationSpring",
+    "FieldValue": "GD2"
+  },
+  {
+    "FieldCode": "UCLAClassificationFall",
+    "FieldValue": "GD2"
+  },
+  {
+    "FieldCode": "UCLAProjectedClassificationWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProjectedClassificationSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProjectedClassificationFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateClassLevelWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateClassLevelSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateClassLevelFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateProjectedClassLevelWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateProjectedClassLevelSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateProjectedClassLevelFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUseTuitionAssistanceWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAUseTuitionAssistanceSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAUseTuitionAssistanceFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLADegreeTypeWinter",
+    "FieldValue": "D"
+  },
+  {
+    "FieldCode": "UCLADegreeTypeSpring",
+    "FieldValue": "D"
+  },
+  {
+    "FieldCode": "UCLADegreeTypeFall",
+    "FieldValue": "D"
+  },
+  {
+    "FieldCode": "UCLAMSOnlineEngineeringHybridProgramWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAMSOnlineEngineeringHybridProgramSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAMSOnlineEngineeringHybridProgramFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAMBAFeeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAMBAFeeSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAMBAFeeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAthletePrimarySportWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAthletePrimarySportSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAthletePrimarySportFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAthleteStatusWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAthleteStatusSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAthleteStatusFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLACareerSuffixWinter",
+    "FieldValue": "1"
+  },
+  {
+    "FieldCode": "UCLACareerSuffixSpring",
+    "FieldValue": "1"
+  },
+  {
+    "FieldCode": "UCLACareerSuffixFall",
+    "FieldValue": "1"
+  },
+  {
+    "FieldCode": "UCLAFullPartTimeAcademicStatusWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAFullPartTimeAcademicStatusSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAFullPartTimeAcademicStatusFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLALoanClearinghouseStatusChangeDateWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALoanClearinghouseStatusChangeDateSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALoanClearinghouseStatusChangeDateFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProfSchoolProjectedYearLevelWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProfSchoolProjectedYearLevelSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProfSchoolProjectedYearLevelFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProfSchoolYearLevelWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProfSchoolYearLevelSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProfSchoolYearLevelFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLACitizenshipWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLACitizenshipSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLACitizenshipFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLACollegeWinter",
+    "FieldValue": "GD"
+  },
+  {
+    "FieldCode": "UCLACollegeSpring",
+    "FieldValue": "GD"
+  },
+  {
+    "FieldCode": "UCLACollegeFall",
+    "FieldValue": "GD"
+  },
+  {
+    "FieldCode": "UCLAVeteranTypeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAVeteranTypeSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAVeteranTypeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAVeteranTypeVerificationWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAVeteranTypeVerificationSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAVeteranTypeVerificationFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UCLAAdmissionDecisionWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAdmissionDecisionSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAdmissionDecisionFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAdmissionDecisionReleaseDateWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAdmissionDecisionReleaseDateSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAdmissionDecisionReleaseDateFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAdmissionDecisionReleaseWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAdmissionDecisionReleaseSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAdmissionDecisionReleaseFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAdmissionLetterDateWinter",
+    "FieldValue": "2014-06-02"
+  },
+  {
+    "FieldCode": "UCLAAdmissionLetterDateSpring",
+    "FieldValue": "2014-06-02"
+  },
+  {
+    "FieldCode": "UCLAAdmissionLetterDateFall",
+    "FieldValue": "2014-06-02"
+  },
+  {
+    "FieldCode": "UCLAAdmitTermWinter",
+    "FieldValue": "14F"
+  },
+  {
+    "FieldCode": "UCLAAdmitTermSpring",
+    "FieldValue": "14F"
+  },
+  {
+    "FieldCode": "UCLAAdmitTermFall",
+    "FieldValue": "14F"
+  },
+  {
+    "FieldCode": "UCLAApplicantCAResidencyStatusWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantCAResidencyStatusSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantCAResidencyStatusFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantFosterCareWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantFosterCareSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantFosterCareFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantIsDependentOfUSVeteranWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantIsDependentOfUSVeteranSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantIsDependentOfUSVeteranFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantLevelEntryWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantLevelEntrySpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantLevelEntryFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantNameWinter",
+    "FieldValue": "RIBEIRO GOMEZ, ANA CAROLINA"
+  },
+  {
+    "FieldCode": "UCLAApplicantNameSpring",
+    "FieldValue": "RIBEIRO GOMEZ, ANA CAROLINA"
+  },
+  {
+    "FieldCode": "UCLAApplicantNameFall",
+    "FieldValue": "RIBEIRO GOMEZ, ANA CAROLINA"
+  },
+  {
+    "FieldCode": "UCLAApplicantStatusInUSArmedServicesWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantStatusInUSArmedServicesSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAApplicantStatusInUSArmedServicesFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAAwardedDegreeWinter",
+    "FieldValue": "CPH"
+  },
+  {
+    "FieldCode": "UCLAAwardedDegreeSpring",
+    "FieldValue": "CPH"
+  },
+  {
+    "FieldCode": "UCLAAwardedDegreeFall",
+    "FieldValue": "CPH"
+  },
+  {
+    "FieldCode": "UCLABachelorDegreeCountWinter",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLABachelorDegreeCountSpring",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLABachelorDegreeCountFall",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLADegreeAwardTermWinter",
+    "FieldValue": "182"
+  },
+  {
+    "FieldCode": "UCLADegreeAwardTermSpring",
+    "FieldValue": "182"
+  },
+  {
+    "FieldCode": "UCLADegreeAwardTermFall",
+    "FieldValue": "182"
+  },
+  {
+    "FieldCode": "UCLAFeeCohortTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAFeeCohortTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAFeeCohortTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastAcademicActionWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastAcademicActionSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastAcademicActionFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastDismissedTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastDismissedTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastDismissedTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALastRegisteredTermWinter",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "UCLALastRegisteredTermSpring",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "UCLALastRegisteredTermFall",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "UCLALastRegularTermWinter",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "UCLALastRegularTermSpring",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "UCLALastRegularTermFall",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "UCLALivedInCAAtLeastOneYearWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALivedInCAAtLeastOneYearSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALivedInCAAtLeastOneYearFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALivedinCAForPastThreeYearsWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALivedinCAForPastThreeYearsSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLALivedinCAForPastThreeYearsFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAMasterDegreeCountWinter",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLAMasterDegreeCountSpring",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLAMasterDegreeCountFall",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLAOnlineApplicantStateResidencyWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAOnlineApplicantStateResidencySpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAOnlineApplicantStateResidencyFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProgramFeeCohortTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProgramFeeCohortTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProgramFeeCohortTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAProgramFeeCohortYearCountWinter",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLAProgramFeeCohortYearCountSpring",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLAProgramFeeCohortYearCountFall",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "UCLAReducedFeeExpirationTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAReducedFeeExpirationTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAReducedFeeExpirationTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAResidencyAsDeterminedByRegistrarWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAResidencyAsDeterminedByRegistrarSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAResidencyAsDeterminedByRegistrarFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAStartDateOfAdmitTermWinter",
+    "FieldValue": "2014-09-29"
+  },
+  {
+    "FieldCode": "UCLAStartDateOfAdmitTermSpring",
+    "FieldValue": "2014-09-29"
+  },
+  {
+    "FieldCode": "UCLAStartDateOfAdmitTermFall",
+    "FieldValue": "2014-09-29"
+  },
+  {
+    "FieldCode": "UCLAStatementOfIntentToRegisterResponseWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAStatementOfIntentToRegisterResponseSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAStatementOfIntentToRegisterResponseFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateDegreeExpectedLastUpdateWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateDegreeExpectedLastUpdateSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateDegreeExpectedLastUpdateFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateDegreeExpectedTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateDegreeExpectedTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateDegreeExpectedTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateGraduationStatusWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateGraduationStatusSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAUndergraduateGraduationStatusFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLACountryOfCitizenshipAsReportedByApplicantWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLACountryOfCitizenshipAsReportedByApplicantSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLACountryOfCitizenshipAsReportedByApplicantFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLATypeOfVisaHeldByApplicantWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLATypeOfVisaHeldByApplicantSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLATypeOfVisaHeldByApplicantFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLAPrimaryMajorCodeWinter",
+    "FieldValue": "0123"
+  },
+  {
+    "FieldCode": "UCLAPrimaryMajorCodeSpring",
+    "FieldValue": "0123"
+  },
+  {
+    "FieldCode": "UCLAPrimaryMajorCodeFall",
+    "FieldValue": "0123"
+  },
+  {
+    "FieldCode": "UCLAPrimaryRegistrationTypeWinter",
+    "FieldValue": "CON"
+  },
+  {
+    "FieldCode": "UCLAPrimaryRegistrationTypeSpring",
+    "FieldValue": "CON"
+  },
+  {
+    "FieldCode": "UCLAPrimaryRegistrationTypeFall",
+    "FieldValue": "CON"
+  },
+  {
+    "FieldCode": "UCLAPrimaryMajorWinter",
+    "FieldValue": "BIOLOGY"
+  },
+  {
+    "FieldCode": "UCLAPrimaryMajorSpring",
+    "FieldValue": "BIOLOGY"
+  },
+  {
+    "FieldCode": "UCLAPrimaryMajorFall",
+    "FieldValue": "BIOLOGY"
+  },
+  {
+    "FieldCode": "UCLASecondaryMajorFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLASecondaryMajorWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLASecondaryMajorSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLASecondaryMajorCodeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLASecondaryMajorCodeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLASecondaryMajorCodeSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLASecondaryRegistrationTypeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLASecondaryRegistrationTypeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UCLASecondaryRegistrationTypeSpring",
+    "FieldValue": ""
+  }
+]

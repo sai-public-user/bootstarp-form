@@ -11,7 +11,7 @@ const CustomField = forwardRef(
     const formControl = useMemo(() => {
       switch (type) {
         case "table": {
-          return <CustomTable {...props} ref={ref} />
+          return <CustomTable {...props} onChange={onChange} ref={ref} />
         }
         case "repeat": {
           return <IncrementalFields {...props} onChange={onChange} ref={ref} />;
