@@ -82,38 +82,38 @@ const fields = [
     type: "number",
     required: true,
   },
-  {
-    label: "Meta Data",
-    name: "metaData",
-    type: "repeat",
-    required: true,
-    max: 5,
-    hasDelete: true,
-    fields: [
-      {
-        label: "First Name",
-        name: "firstName",
-        type: "text",
-        required: true,
-      },
-      {
-        label: "Last Name",
-        name: "lastName",
-        type: "text",
-        required: true,
-      },
-      {
-        label: "Marital Status",
-        name: "maritalStatus",
-        type: "switch",
-        options: [
-          { label: "Married", value: "married" },
-          { label: "Single", value: "single" },
-          { label: "Divorced", value: "divorced" },
-        ],
-      },
-    ],
-  },
+  // {
+  //   label: "Meta Data",
+  //   name: "metaData",
+  //   type: "repeat",
+  //   required: true,
+  //   max: 5,
+  //   hasDelete: true,
+  //   fields: [
+  //     {
+  //       label: "First Name",
+  //       name: "firstName",
+  //       type: "text",
+  //       required: true,
+  //     },
+  //     {
+  //       label: "Last Name",
+  //       name: "lastName",
+  //       type: "text",
+  //       required: true,
+  //     },
+  //     {
+  //       label: "Marital Status",
+  //       name: "maritalStatus",
+  //       type: "switch",
+  //       options: [
+  //         { label: "Married", value: "married" },
+  //         { label: "Single", value: "single" },
+  //         { label: "Divorced", value: "divorced" },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     label: "Meta Data",
     name: "metaData",
@@ -126,7 +126,11 @@ const fields = [
     striped: true,
     bordered: true,
     hover: true,
+    editable: true,
     pagination: 'default',
+    title: "Meta Data",
+    hasTableActions: true,
+    tableActionProps: {},
     columns: [
       { name: "FieldCode", label: "FieldCode" },
       { name: "FieldValue", label: "FieldValue" },
