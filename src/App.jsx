@@ -132,8 +132,9 @@ const fields = [
     hasTableActions: true,
     tableActionProps: {},
     columns: [
-      { name: "FieldCode", label: "FieldCode" },
-      { name: "FieldValue", label: "FieldValue" },
+      { name: "FieldCode", label: "FieldCode", showInExcel: true },
+      { name: "FieldValue", label: "FieldValue", showInExcel: true },
+      { name: "Actions", label: "Actoins", renderRow: () => <b>Row Actions</b> }
     ],
   },
 ];

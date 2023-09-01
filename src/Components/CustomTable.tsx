@@ -3,13 +3,18 @@ import { Col, Row, Stack } from "react-bootstrap";
 import { PaginationControl } from "react-bootstrap-pagination-control";
 import Table from "react-bootstrap/Table";
 import TableActions from "./TableActions";
+import Excel from "exceljs";
+import { saveAs } from "file-saver";
 
 export interface CustomColumn {
   name: string;
   label: React.ReactNode;
   width?: number | string;
+  showInExcel?: boolean;
   cellClass?: string;
   headerClass?: string;
+  renderHeader?: (label: React.ReactNode, col: CustomColumn) => React.ReactNode;
+  renderRow?: (value: any, row: CustomRow, index: number) => React.ReactNode;
 }
 
 export interface CustomRow {
@@ -29,9 +34,28 @@ export interface CustomTableProps {
   rowsPerPage?: number;
   editable?: boolean;
   pagination?: "default" | false | ReactNode;
-  title?: String;
+  title?: string;
   hasTableActions?: boolean;
   tableActionProps?: any;
+}
+
+async function CreateExcel(
+  name: string,
+  columns: CustomColumn[],
+  rows: CustomRow[]
+) {
+  const workbook = new Excel.Workbook();
+  const worksheet = workbook.addWorksheet(name);
+  worksheet.columns = columns
+    .filter((col) => col.showInExcel)
+    .map((col) => ({ header: col.label as string, key: col.name as string }));
+  worksheet.addRows(rows);
+  await workbook.xlsx.writeBuffer().then((data) => {
+    const blob = new Blob([data], {
+      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8",
+    });
+    saveAs(blob, `${name}.xlsx`);
+  });
 }
 
 function CustomTable({
@@ -51,10 +75,28 @@ function CustomTable({
   ...rest
 }: CustomTableProps) {
   const [page, setPage] = useState(1);
-  const [editRow, setEditRow] = useState<null | number>(null);
+  const [search, setSearch] = useState("");
   const newRows = useMemo(() => {
-    return rows.slice((page - 1) * rowsPerPage, rowsPerPage * page);
-  }, [page, rows, rowsPerPage]);
+    const searchedRows = rows.filter((row) =>
+      JSON.stringify(Object.values(row)).includes(search)
+    );
+    return searchedRows.slice((page - 1) * rowsPerPage, rowsPerPage * page);
+  }, [page, rows, rowsPerPage, search]);
+  const { onSearch, onDownload, onAddRow, ...actionProps } = tableActionProps;
+
+  const handleSearch = (search: string) => {
+    onSearch ? onSearch(search) : setSearch(search);
+  };
+  const handleDownload = () => {
+    // add default download logic
+    if (onDownload) onDownload();
+    else {
+      CreateExcel(`${title.replace(/ /g, "_")}_${Date.now()}`, columns, rows);
+    }
+  };
+  const handleAddRow = () => {
+    if (onAddRow) onAddRow();
+  };
 
   const commonClass = "d-flex justify-content-center align-items-center";
   return (
@@ -77,7 +119,10 @@ function CustomTable({
               hasAddRow
               hasDownload
               hasSearch
-              {...tableActionProps}
+              onSearch={handleSearch}
+              onDownload={handleDownload}
+              onAddRow={handleAddRow}
+              {...actionProps}
             />
           </Col>
         </Row>
@@ -94,7 +139,9 @@ function CustomTable({
                     style={{ width: col.width }}
                     key={col.name}
                   >
-                    {col.label}
+                    {col.renderHeader
+                      ? col.renderHeader(col.label, col)
+                      : col.label}
                   </th>
                 ))}
               </tr>
@@ -106,22 +153,25 @@ function CustomTable({
                     {showIndex && (
                       <td>{index + 1 + (page - 1) * rowsPerPage}</td>
                     )}
-                    {columns.map(({ name, width, cellClass }) => {
+                    {columns.map(({ name, width, cellClass, renderRow }) => {
                       return (
                         <td
                           key={`${tableName}_${name}_${index}`}
                           style={{ width }}
                           className={cellClass}
-                          onClick={() =>
-                            setEditRow(index + 1 + (page - 1) * rowsPerPage)
-                          }
                           title={
                             (typeof row[name] === "string"
                               ? row[name]
                               : "") as string
                           }
                         >
-                          {row[name]}
+                          {renderRow
+                            ? renderRow(
+                                row[name],
+                                row,
+                                index + (page - 1) * rowsPerPage
+                              )
+                            : row[name]}
                         </td>
                       );
                     })}

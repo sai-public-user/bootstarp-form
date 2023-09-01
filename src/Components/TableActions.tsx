@@ -16,10 +16,10 @@ interface TableActionsProps {
 }
 
 export default function TableActions({
-  onSearch,
   hasAddRow,
   hasSearch,
   hasDownload,
+  onSearch,
   onDownload,
   onAddRow,
 }: TableActionsProps) {
