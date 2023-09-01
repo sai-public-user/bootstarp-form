@@ -64,7 +64,6 @@ const CustomForm = forwardRef(
 
     const handleChange = (evt) => {
       setValues((prev) => {
-        console.log(evt.target.value, evt.target.name);
         prev[evt.target.name] = evt.target.value;
         return prev;
       });

@@ -1,147 +1,201 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import CustomForm from "./Components/CustomForm";
-import { Col, Form, InputGroup, Row } from "react-bootstrap";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { CustomRow } from "./Components/CustomTable";
+import { Button, Col, Form, InputGroup, Row, Stack } from "react-bootstrap";
+import {
+  MagnifyingGlassIcon,
+  PencilIcon,
+  TrashIcon,
+} from "@heroicons/react/24/outline";
+import { useCallback, useState } from "react";
 import TestData from "./metadata.json";
-
-const fields = [
-  {
-    label: "First Name",
-    name: "firstName",
-    type: "text",
-    required: true,
-  },
-  {
-    label: "Last Name",
-    name: "lastName",
-    type: "text",
-    required: true,
-  },
-  {
-    label: "Email",
-    name: "email",
-    type: "email",
-    required: true,
-  },
-  {
-    label: "Phone",
-    name: "phone",
-    type: "tel",
-    required: true,
-  },
-  {
-    label: "Gender",
-    name: "gender",
-    type: "radio",
-    options: [
-      { label: "Male", value: "male" },
-      { label: "Female", value: "female" },
-      { label: "Other", value: "other" },
-    ],
-    required: true,
-  },
-  {
-    label: "Date Of Birth",
-    name: "dob",
-    type: "date",
-    required: true,
-  },
-  {
-    label: "Languages",
-    name: "lang",
-    type: "checkbox",
-    options: [
-      { label: "English", value: "eng" },
-      { label: "Telegu", value: "tel" },
-      { label: "Hindi", value: "hin" },
-    ],
-    required: true,
-  },
-  {
-    label: "Country",
-    name: "country",
-    type: "select",
-    options: [
-      { label: "United States", value: "US" },
-      { label: "India", value: "IN" },
-      { label: "Canada", value: "CN" },
-    ],
-    required: true,
-  },
-  {
-    label: "Location",
-    name: "location",
-    type: "text",
-    required: true,
-  },
-  {
-    label: "Zip Code",
-    name: "zip",
-    type: "number",
-    required: true,
-  },
-  // {
-  //   label: "Meta Data",
-  //   name: "metaData",
-  //   type: "repeat",
-  //   required: true,
-  //   max: 5,
-  //   hasDelete: true,
-  //   fields: [
-  //     {
-  //       label: "First Name",
-  //       name: "firstName",
-  //       type: "text",
-  //       required: true,
-  //     },
-  //     {
-  //       label: "Last Name",
-  //       name: "lastName",
-  //       type: "text",
-  //       required: true,
-  //     },
-  //     {
-  //       label: "Marital Status",
-  //       name: "maritalStatus",
-  //       type: "switch",
-  //       options: [
-  //         { label: "Married", value: "married" },
-  //         { label: "Single", value: "single" },
-  //         { label: "Divorced", value: "divorced" },
-  //       ],
-  //     },
-  //   ],
-  // },
-  {
-    label: "Meta Data",
-    name: "metaData",
-    type: "table",
-    rowsPerPage: 25,
-    rows: TestData,
-    showIndex: true,
-    rowClass: "test",
-    responsive: true,
-    striped: true,
-    bordered: true,
-    hover: true,
-    editable: true,
-    pagination: 'default',
-    title: "Meta Data",
-    hasTableActions: true,
-    tableActionProps: {},
-    columns: [
-      { name: "FieldCode", label: "FieldCode", showInExcel: true },
-      { name: "FieldValue", label: "FieldValue", showInExcel: true },
-      { name: "Actions", label: "Actoins", renderRow: () => <b>Row Actions</b> }
-    ],
-  },
-];
+import CustomField from "./Components/CustomField";
+import CustomModal from "./Components/CustomModal";
 
 function App() {
   const [search, setSearch] = useState();
-  const [data, setData] = useState({});
+  const [data] = useState({});
+  const [showModal, setShowModal] = useState(null);
+  const [currData, setCurrData] = useState({});
+  const [currIndex, setCurrIndex] = useState(null);
+  const [metaData, setMetaData] = useState(TestData);
+
+  const onDeleteRow = () => { };
+
+  const onEditRow = (index, row) => {
+    setCurrData({ ...row });
+    setCurrIndex(index);
+    setShowModal("Edit");
+  };
+
+  const handleAddRow = () => {
+    setShowModal("Add");
+  }
+
+  const rowActions = useCallback((row, index) => {
+    return (
+      <Stack className="flex-row justify-content-center" gap={2}>
+        <Button
+          title="Edit Row"
+          variant="primary"
+          size="sm"
+          onClick={() => onEditRow(index, row)}
+        >
+          <PencilIcon width={18} />
+        </Button>
+        {row.isNewRow && (
+          <Button
+            title="Delete Row"
+            variant="secondary"
+            size="sm"
+            onClick={() => onDeleteRow(index)}
+          >
+            <TrashIcon width={18} />
+          </Button>
+        )}
+      </Stack>
+    );
+  }, []);
+
+  const fields = [
+    {
+      label: "First Name",
+      name: "firstName",
+      type: "text",
+      required: true,
+    },
+    {
+      label: "Last Name",
+      name: "lastName",
+      type: "text",
+      required: true,
+    },
+    {
+      label: "Email",
+      name: "email",
+      type: "email",
+      required: true,
+    },
+    {
+      label: "Phone",
+      name: "phone",
+      type: "tel",
+      required: true,
+    },
+    {
+      label: "Gender",
+      name: "gender",
+      type: "radio",
+      options: [
+        { label: "Male", value: "male" },
+        { label: "Female", value: "female" },
+        { label: "Other", value: "other" },
+      ],
+      required: true,
+    },
+    {
+      label: "Date Of Birth",
+      name: "dob",
+      type: "date",
+      required: true,
+    },
+    {
+      label: "Languages",
+      name: "lang",
+      type: "checkbox",
+      options: [
+        { label: "English", value: "eng" },
+        { label: "Telegu", value: "tel" },
+        { label: "Hindi", value: "hin" },
+      ],
+      required: true,
+    },
+    {
+      label: "Country",
+      name: "country",
+      type: "select",
+      options: [
+        { label: "United States", value: "US" },
+        { label: "India", value: "IN" },
+        { label: "Canada", value: "CN" },
+      ],
+      required: true,
+    },
+    {
+      label: "Location",
+      name: "location",
+      type: "text",
+      required: true,
+    },
+    {
+      label: "Zip Code",
+      name: "zip",
+      type: "number",
+      required: true,
+    },
+    // {
+    //   label: "Meta Data",
+    //   name: "metaData",
+    //   type: "repeat",
+    //   required: true,
+    //   max: 5,
+    //   hasDelete: true,
+    //   fields: [
+    //     {
+    //       label: "First Name",
+    //       name: "firstName",
+    //       type: "text",
+    //       required: true,
+    //     },
+    //     {
+    //       label: "Last Name",
+    //       name: "lastName",
+    //       type: "text",
+    //       required: true,
+    //     },
+    //     {
+    //       label: "Marital Status",
+    //       name: "maritalStatus",
+    //       type: "switch",
+    //       options: [
+    //         { label: "Married", value: "married" },
+    //         { label: "Single", value: "single" },
+    //         { label: "Divorced", value: "divorced" },
+    //       ],
+    //     },
+    //   ],
+    // },
+    {
+      label: "Meta Data",
+      name: "metaData",
+      type: "table",
+      rowsPerPage: 25,
+      rows: metaData,
+      showIndex: true,
+      rowClass: "test",
+      responsive: true,
+      striped: true,
+      bordered: true,
+      hover: true,
+      editable: true,
+      pagination: "default",
+      title: "Meta Data",
+      hasTableActions: true,
+      tableActionProps: {
+        onAddRow: handleAddRow,
+      },
+      columns: [
+        { name: "FieldCode", label: "FieldCode", showInExcel: true },
+        { name: "FieldValue", label: "FieldValue", showInExcel: true },
+        {
+          name: "Actions",
+          label: "Actoins",
+          renderRow: (_, row, idx) => rowActions(row, idx),
+        },
+      ],
+    },
+  ];
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -176,6 +230,34 @@ function App() {
       </Row>
     );
   };
+
+  const handleCurrValChange = (e) => {
+    setCurrData((prev) => {
+      prev[e.target.name] = e.target.value;
+      return {...prev};
+    });
+  };
+
+  const onModalClose = () => {
+    setCurrData({});
+    setCurrIndex(null);
+    setShowModal(null);
+  }
+
+  const onModalSave = useCallback(() => {
+    if (currIndex) {
+      setMetaData(prev => {
+        prev[currIndex] = { ...currData, modified: true };
+        return [...prev];
+      });
+    } else {
+      setMetaData(prev => {
+        return [{ ...currData, isNewRow: true }, ...prev];
+      });
+    }
+    onModalClose();
+  }, [currData, currIndex]);
+
   return (
     <div className="App">
       <CustomForm
@@ -187,6 +269,35 @@ function App() {
         customContent={getCustomContent()}
         data={data}
       />
+      <CustomModal
+        title={`${showModal} Data`}
+        show={showModal}
+        onClose={onModalClose}
+        onSave={onModalSave}
+      >
+        <Form>
+          <Stack className="mb-3" gap={3}>
+            <CustomField
+              md={12}
+              onChange={handleCurrValChange}
+              label="Field Code"
+              name="FieldCode"
+              type="text"
+              value={currData['FieldCode']}
+              required
+            />
+            <CustomField
+              md={12}
+              onChange={handleCurrValChange}
+              label="Field Value"
+              name="FieldValue"
+              type="text"
+              value={currData['FieldValue']}
+              required
+            />
+          </Stack>
+        </Form>
+      </CustomModal>
     </div>
   );
 }

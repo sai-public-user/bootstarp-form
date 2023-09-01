@@ -106,7 +106,7 @@ const CustomField = forwardRef(
         ) : (
           <Stack className="flex-row row">
             {showLabel && (
-              <Col md={3} sm={12}>
+              <Col md={3} sm={12} className="mt-auto">
                 <Form.Label className="h6" {...labelProps}>
                   {props.label}
                 </Form.Label>
