@@ -20,7 +20,12 @@ function App() {
   const [currIndex, setCurrIndex] = useState(null);
   const [metaData, setMetaData] = useState(TestData);
 
-  const onDeleteRow = () => { };
+  const onDeleteRow = (index) => {
+    setMetaData(prev => {
+      prev.splice(index, 1);
+      return [...prev];
+    })
+   };
 
   const onEditRow = (index, row) => {
     setCurrData({ ...row });
