@@ -1,7 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import CustomForm from "./Components/CustomForm";
-import { CustomRow } from "./Components/CustomTable";
 import { Button, Col, Form, InputGroup, Row, Stack } from "react-bootstrap";
 import {
   MagnifyingGlassIcon,
@@ -64,24 +63,28 @@ function App() {
       name: "firstName",
       type: "text",
       required: true,
+      showIn: ["create", "update"],
     },
     {
       label: "Last Name",
       name: "lastName",
       type: "text",
       required: true,
+      showIn: ["create", "update"],
     },
     {
       label: "Email",
       name: "email",
       type: "email",
       required: true,
+      showIn: ["create", "update"],
     },
     {
       label: "Phone",
       name: "phone",
       type: "tel",
       required: true,
+      showIn: ["create", "update"],
     },
     {
       label: "Gender",
@@ -93,12 +96,14 @@ function App() {
         { label: "Other", value: "other" },
       ],
       required: true,
+      showIn: ["create", "update"],
     },
     {
       label: "Date Of Birth",
       name: "dob",
       type: "date",
       required: true,
+      showIn: ["create", "update"],
     },
     {
       label: "Languages",
@@ -110,6 +115,7 @@ function App() {
         { label: "Hindi", value: "hin" },
       ],
       required: true,
+      showIn: ["create", "update"],
     },
     {
       label: "Country",
@@ -121,51 +127,55 @@ function App() {
         { label: "Canada", value: "CN" },
       ],
       required: true,
+      showIn: ["create", "update"],
     },
     {
       label: "Location",
       name: "location",
       type: "text",
       required: true,
+      showIn: ["create", "update"],
     },
     {
       label: "Zip Code",
       name: "zip",
       type: "number",
       required: true,
+      showIn: ["create", "update"],
     },
-    // {
-    //   label: "Meta Data",
-    //   name: "metaData",
-    //   type: "repeat",
-    //   required: true,
-    //   max: 5,
-    //   hasDelete: true,
-    //   fields: [
-    //     {
-    //       label: "First Name",
-    //       name: "firstName",
-    //       type: "text",
-    //       required: true,
-    //     },
-    //     {
-    //       label: "Last Name",
-    //       name: "lastName",
-    //       type: "text",
-    //       required: true,
-    //     },
-    //     {
-    //       label: "Marital Status",
-    //       name: "maritalStatus",
-    //       type: "switch",
-    //       options: [
-    //         { label: "Married", value: "married" },
-    //         { label: "Single", value: "single" },
-    //         { label: "Divorced", value: "divorced" },
-    //       ],
-    //     },
-    //   ],
-    // },
+    {
+      label: "Meta Data",
+      name: "metaData",
+      type: "repeat",
+      required: true,
+      max: 5,
+      hasDelete: true,
+      showIn: ["create"],
+      fields: [
+        {
+          label: "First Name",
+          name: "firstName",
+          type: "text",
+          required: true,
+        },
+        {
+          label: "Last Name",
+          name: "lastName",
+          type: "text",
+          required: true,
+        },
+        {
+          label: "Marital Status",
+          name: "maritalStatus",
+          type: "switch",
+          options: [
+            { label: "Married", value: "married" },
+            { label: "Single", value: "single" },
+            { label: "Divorced", value: "divorced" },
+          ],
+        },
+      ],
+    },
     {
       label: "Meta Data",
       name: "metaData",
@@ -185,6 +195,7 @@ function App() {
       tableActionProps: {
         onAddRow: handleAddRow,
       },
+      showIn: ["update"],
       columns: [
         { name: "FieldCode", label: "FieldCode", showInExcel: true },
         { name: "FieldValue", label: "FieldValue", showInExcel: true },
