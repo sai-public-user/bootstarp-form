@@ -7,10 +7,14 @@ import {
   PencilIcon,
   TrashIcon,
 } from "@heroicons/react/24/outline";
+import {
+FunnelIcon,
+} from "@heroicons/react/24/solid";
 import { useCallback, useState } from "react";
 import TestData from "./metadata.json";
 import CustomField from "./Components/CustomField";
 import CustomModal from "./Components/CustomModal";
+import Menu from "./Components/Menu";
 
 function App() {
   const [search, setSearch] = useState();
@@ -21,11 +25,11 @@ function App() {
   const [metaData, setMetaData] = useState(TestData);
 
   const onDeleteRow = (index) => {
-    setMetaData(prev => {
+    setMetaData((prev) => {
       prev.splice(index, 1);
       return [...prev];
-    })
-   };
+    });
+  };
 
   const onEditRow = (index, row) => {
     setCurrData({ ...row });
@@ -35,7 +39,7 @@ function App() {
 
   const handleAddRow = () => {
     setShowModal("Add");
-  }
+  };
 
   const rowActions = useCallback((row, index) => {
     return (
@@ -61,6 +65,22 @@ function App() {
       </Stack>
     );
   }, []);
+
+  const renderColHeader = (colName, col) => {
+    return (
+      <Row className="position-relative">
+        <Col>{colName}</Col>
+        <span className="position-absolute w-auto" style={{ right: 20 }}>
+          <Menu
+            id={colName.replace(/ /g, "").toLowerCase()}
+            trigger={<FunnelIcon width="24" />}
+          >
+            Filter content comes handleCurrValChange
+          </Menu>
+        </span>
+      </Row>
+    );
+  };
 
   const fields = [
     {
@@ -202,7 +222,12 @@ function App() {
       },
       showIn: ["update"],
       columns: [
-        { name: "FieldCode", label: "FieldCode", showInExcel: true },
+        {
+          name: "FieldCode",
+          label: "FieldCode",
+          showInExcel: true,
+          renderHeader: renderColHeader,
+        },
         { name: "FieldValue", label: "FieldValue", showInExcel: true },
         {
           name: "Actions",
@@ -250,7 +275,7 @@ function App() {
   const handleCurrValChange = (e) => {
     setCurrData((prev) => {
       prev[e.target.name] = e.target.value;
-      return {...prev};
+      return { ...prev };
     });
   };
 
@@ -258,16 +283,16 @@ function App() {
     setCurrData({});
     setCurrIndex(null);
     setShowModal(null);
-  }
+  };
 
   const onModalSave = useCallback(() => {
     if (currIndex) {
-      setMetaData(prev => {
+      setMetaData((prev) => {
         prev[currIndex] = { ...currData, modified: true };
         return [...prev];
       });
     } else {
-      setMetaData(prev => {
+      setMetaData((prev) => {
         return [{ ...currData, isNewRow: true }, ...prev];
       });
     }
@@ -299,7 +324,7 @@ function App() {
               label="Field Code"
               name="FieldCode"
               type="text"
-              value={currData['FieldCode']}
+              value={currData["FieldCode"]}
               required
             />
             <CustomField
@@ -308,7 +333,7 @@ function App() {
               label="Field Value"
               name="FieldValue"
               type="text"
-              value={currData['FieldValue']}
+              value={currData["FieldValue"]}
               required
             />
           </Stack>

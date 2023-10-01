@@ -1,1 +1,974 @@
-
+[
+  {
+    "FieldCode": "SummerOnlyStudent",
+    "FieldValue": "R"
+  },
+  {
+    "FieldCode": "TransferCreditEvaluatorInitials",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "FreshmanSummerProgramStudent",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "TransferSummerProgramStudent",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "DoctoralDegreeCount",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "LastSummerTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "SecondaryBaccalaureateStudent",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "LawNonmatriculatedProgram",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "GradProfDegreeExpectedTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "GradProfGraduationStatus",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "GradProfExpectedTermLastUpdate",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LeaveOfAbsenceStartTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LeaveOfAbsenceReturnTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateAdmissionLevel",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProspectiveTuitionAssistance",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "DoctoralNonresExemptionLastTerm",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "CurrentLastSchoolAttendedIsInCA",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "GraduatingTerm",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "VisaTypeWinter",
+    "FieldValue": "J1"
+  },
+  {
+    "FieldCode": "VisaTypeSpring",
+    "FieldValue": "J1"
+  },
+  {
+    "FieldCode": "VisaTypeFall",
+    "FieldValue": "J1"
+  },
+  {
+    "FieldCode": "ResidencyWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "ResidencySpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "ResidencyFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "DegreeWinter",
+    "FieldValue": "PHD = DOCTOR OF PHILOSOPHY"
+  },
+  {
+    "FieldCode": "DegreeSpring",
+    "FieldValue": "PHD = DOCTOR OF PHILOSOPHY"
+  },
+  {
+    "FieldCode": "DegreeFall",
+    "FieldValue": "PHD = DOCTOR OF PHILOSOPHY"
+  },
+  {
+    "FieldCode": "ReducedEducationalFeeWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "ReducedEducationalFeeSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "ReducedEducationalFeeFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "EducationAbroadProgramStudentWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "EducationAbroadProgramStudentSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "EducationAbroadProgramStudentFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "JointStudentWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "JointStudentSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "JointStudentFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "ROTCWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ROTCSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ROTCFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ReducedNonresidentFeeWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "ReducedNonresidentFeeSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "ReducedNonresidentFeeFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "VisitingStudentTypeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "VisitingStudentTypeSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "VisitingStudentTypeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "StudentInAbsentiaWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "StudentInAbsentiaSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "StudentInAbsentiaFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "MaterialFeeCohortTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "MaterialFeeCohortTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "MaterialFeeCohortTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "EnrollmentWithdrawalWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "EnrollmentWithdrawalSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "EnrollmentWithdrawalFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "EnrollmentWithdrawalEffectiveDateWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "EnrollmentWithdrawalEffectiveDateSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "EnrollmentWithdrawalEffectiveDateFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastDateOfAttendanceWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastDateOfAttendanceSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastDateOfAttendanceFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProgramFeeAssessmentFlagWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "ProgramFeeAssessmentFlagSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "ProgramFeeAssessmentFlagFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "CareerWinter",
+    "FieldValue": "G"
+  },
+  {
+    "FieldCode": "CareerSpring",
+    "FieldValue": "G"
+  },
+  {
+    "FieldCode": "CareerFall",
+    "FieldValue": "G"
+  },
+  {
+    "FieldCode": "ClassificationWinter",
+    "FieldValue": "GD2"
+  },
+  {
+    "FieldCode": "ClassificationSpring",
+    "FieldValue": "GD2"
+  },
+  {
+    "FieldCode": "ClassificationFall",
+    "FieldValue": "GD2"
+  },
+  {
+    "FieldCode": "ProjectedClassificationWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProjectedClassificationSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProjectedClassificationFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateClassLevelWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateClassLevelSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateClassLevelFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateProjectedClassLevelWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateProjectedClassLevelSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateProjectedClassLevelFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UseTuitionAssistanceWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UseTuitionAssistanceSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "UseTuitionAssistanceFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "DegreeTypeWinter",
+    "FieldValue": "D"
+  },
+  {
+    "FieldCode": "DegreeTypeSpring",
+    "FieldValue": "D"
+  },
+  {
+    "FieldCode": "DegreeTypeFall",
+    "FieldValue": "D"
+  },
+  {
+    "FieldCode": "MSOnlineEngineeringHybridProgramWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "MSOnlineEngineeringHybridProgramSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "MSOnlineEngineeringHybridProgramFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "MBAFeeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "MBAFeeSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "MBAFeeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AthletePrimarySportWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AthletePrimarySportSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AthletePrimarySportFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AthleteStatusWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AthleteStatusSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AthleteStatusFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "CareerSuffixWinter",
+    "FieldValue": "1"
+  },
+  {
+    "FieldCode": "CareerSuffixSpring",
+    "FieldValue": "1"
+  },
+  {
+    "FieldCode": "CareerSuffixFall",
+    "FieldValue": "1"
+  },
+  {
+    "FieldCode": "FullPartTimeAcademicStatusWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "FullPartTimeAcademicStatusSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "FullPartTimeAcademicStatusFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "LoanClearinghouseStatusChangeDateWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LoanClearinghouseStatusChangeDateSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LoanClearinghouseStatusChangeDateFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProfSchoolProjectedYearLevelWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProfSchoolProjectedYearLevelSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProfSchoolProjectedYearLevelFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProfSchoolYearLevelWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProfSchoolYearLevelSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProfSchoolYearLevelFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "CitizenshipWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "CitizenshipSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "CitizenshipFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "CollegeWinter",
+    "FieldValue": "GD"
+  },
+  {
+    "FieldCode": "CollegeSpring",
+    "FieldValue": "GD"
+  },
+  {
+    "FieldCode": "CollegeFall",
+    "FieldValue": "GD"
+  },
+  {
+    "FieldCode": "VeteranTypeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "VeteranTypeSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "VeteranTypeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "VeteranTypeVerificationWinter",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "VeteranTypeVerificationSpring",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "VeteranTypeVerificationFall",
+    "FieldValue": "N"
+  },
+  {
+    "FieldCode": "AdmissionDecisionWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AdmissionDecisionSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AdmissionDecisionFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AdmissionDecisionReleaseDateWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AdmissionDecisionReleaseDateSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AdmissionDecisionReleaseDateFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AdmissionDecisionReleaseWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AdmissionDecisionReleaseSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AdmissionDecisionReleaseFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AdmissionLetterDateWinter",
+    "FieldValue": "2014-06-02"
+  },
+  {
+    "FieldCode": "AdmissionLetterDateSpring",
+    "FieldValue": "2014-06-02"
+  },
+  {
+    "FieldCode": "AdmissionLetterDateFall",
+    "FieldValue": "2014-06-02"
+  },
+  {
+    "FieldCode": "AdmitTermWinter",
+    "FieldValue": "14F"
+  },
+  {
+    "FieldCode": "AdmitTermSpring",
+    "FieldValue": "14F"
+  },
+  {
+    "FieldCode": "AdmitTermFall",
+    "FieldValue": "14F"
+  },
+  {
+    "FieldCode": "ApplicantCAResidencyStatusWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantCAResidencyStatusSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantCAResidencyStatusFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantFosterCareWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantFosterCareSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantFosterCareFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantIsDependentOfUSVeteranWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantIsDependentOfUSVeteranSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantIsDependentOfUSVeteranFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantLevelEntryWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantLevelEntrySpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantLevelEntryFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantNameWinter",
+    "FieldValue": "RIBEIRO GOMEZ, ANA CAROLINA"
+  },
+  {
+    "FieldCode": "ApplicantNameSpring",
+    "FieldValue": "RIBEIRO GOMEZ, ANA CAROLINA"
+  },
+  {
+    "FieldCode": "ApplicantNameFall",
+    "FieldValue": "RIBEIRO GOMEZ, ANA CAROLINA"
+  },
+  {
+    "FieldCode": "ApplicantStatusInUSArmedServicesWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantStatusInUSArmedServicesSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ApplicantStatusInUSArmedServicesFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "AwardedDegreeWinter",
+    "FieldValue": "CPH"
+  },
+  {
+    "FieldCode": "AwardedDegreeSpring",
+    "FieldValue": "CPH"
+  },
+  {
+    "FieldCode": "AwardedDegreeFall",
+    "FieldValue": "CPH"
+  },
+  {
+    "FieldCode": "BachelorDegreeCountWinter",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "BachelorDegreeCountSpring",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "BachelorDegreeCountFall",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "DegreeAwardTermWinter",
+    "FieldValue": "182"
+  },
+  {
+    "FieldCode": "DegreeAwardTermSpring",
+    "FieldValue": "182"
+  },
+  {
+    "FieldCode": "DegreeAwardTermFall",
+    "FieldValue": "182"
+  },
+  {
+    "FieldCode": "FeeCohortTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "FeeCohortTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "FeeCohortTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastAcademicActionWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastAcademicActionSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastAcademicActionFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastDismissedTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastDismissedTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastDismissedTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LastRegisteredTermWinter",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "LastRegisteredTermSpring",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "LastRegisteredTermFall",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "LastRegularTermWinter",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "LastRegularTermSpring",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "LastRegularTermFall",
+    "FieldValue": "22F"
+  },
+  {
+    "FieldCode": "LivedInCAAtLeastOneYearWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LivedInCAAtLeastOneYearSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LivedInCAAtLeastOneYearFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LivedinCAForPastThreeYearsWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LivedinCAForPastThreeYearsSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "LivedinCAForPastThreeYearsFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "MasterDegreeCountWinter",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "MasterDegreeCountSpring",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "MasterDegreeCountFall",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "OnlineApplicantStateResidencyWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "OnlineApplicantStateResidencySpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "OnlineApplicantStateResidencyFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProgramFeeCohortTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProgramFeeCohortTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProgramFeeCohortTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ProgramFeeCohortYearCountWinter",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "ProgramFeeCohortYearCountSpring",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "ProgramFeeCohortYearCountFall",
+    "FieldValue": "0"
+  },
+  {
+    "FieldCode": "ReducedFeeExpirationTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ReducedFeeExpirationTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ReducedFeeExpirationTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ResidencyAsDeterminedByRegistrarWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ResidencyAsDeterminedByRegistrarSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "ResidencyAsDeterminedByRegistrarFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "StartDateOfAdmitTermWinter",
+    "FieldValue": "2014-09-29"
+  },
+  {
+    "FieldCode": "StartDateOfAdmitTermSpring",
+    "FieldValue": "2014-09-29"
+  },
+  {
+    "FieldCode": "StartDateOfAdmitTermFall",
+    "FieldValue": "2014-09-29"
+  },
+  {
+    "FieldCode": "StatementOfIntentToRegisterResponseWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "StatementOfIntentToRegisterResponseSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "StatementOfIntentToRegisterResponseFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateDegreeExpectedLastUpdateWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateDegreeExpectedLastUpdateSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateDegreeExpectedLastUpdateFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateDegreeExpectedTermWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateDegreeExpectedTermSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateDegreeExpectedTermFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateGraduationStatusWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateGraduationStatusSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "UndergraduateGraduationStatusFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "CountryOfCitizenshipAsReportedByApplicantWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "CountryOfCitizenshipAsReportedByApplicantSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "CountryOfCitizenshipAsReportedByApplicantFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "TypeOfVisaHeldByApplicantWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "TypeOfVisaHeldByApplicantSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "TypeOfVisaHeldByApplicantFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "PrimaryMajorCodeWinter",
+    "FieldValue": "0123"
+  },
+  {
+    "FieldCode": "PrimaryMajorCodeSpring",
+    "FieldValue": "0123"
+  },
+  {
+    "FieldCode": "PrimaryMajorCodeFall",
+    "FieldValue": "0123"
+  },
+  {
+    "FieldCode": "PrimaryRegistrationTypeWinter",
+    "FieldValue": "CON"
+  },
+  {
+    "FieldCode": "PrimaryRegistrationTypeSpring",
+    "FieldValue": "CON"
+  },
+  {
+    "FieldCode": "PrimaryRegistrationTypeFall",
+    "FieldValue": "CON"
+  },
+  {
+    "FieldCode": "PrimaryMajorWinter",
+    "FieldValue": "BIOLOGY"
+  },
+  {
+    "FieldCode": "PrimaryMajorSpring",
+    "FieldValue": "BIOLOGY"
+  },
+  {
+    "FieldCode": "PrimaryMajorFall",
+    "FieldValue": "BIOLOGY"
+  },
+  {
+    "FieldCode": "SecondaryMajorFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "SecondaryMajorWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "SecondaryMajorSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "SecondaryMajorCodeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "SecondaryMajorCodeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "SecondaryMajorCodeSpring",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "SecondaryRegistrationTypeFall",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "SecondaryRegistrationTypeWinter",
+    "FieldValue": ""
+  },
+  {
+    "FieldCode": "SecondaryRegistrationTypeSpring",
+    "FieldValue": ""
+  }
+]
